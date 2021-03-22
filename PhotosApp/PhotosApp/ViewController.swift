@@ -9,11 +9,16 @@ import UIKit
 
 class ViewController: UIViewController {
 
+    @IBOutlet weak var colorCollection: UICollectionView!
+    
+    private let colorDataSource = ColorCollectionDataSource()
+    private let colorFlowLayout = ColorCollectionFlowLayout()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        print("test")
+        
+        colorCollection.dataSource = colorDataSource
+        colorCollection.delegate = colorFlowLayout
     }
-
-
 }
 
