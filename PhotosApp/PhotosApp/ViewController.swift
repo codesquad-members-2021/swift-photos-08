@@ -6,19 +6,26 @@
 //
 
 import UIKit
+import Photos
 
 class ViewController: UIViewController {
 
-    @IBOutlet weak var colorCollection: UICollectionView!
+    @IBOutlet weak var collectionView: UICollectionView!
     
-    private let colorDataSource = ColorCollectionDataSource()
-    private let colorFlowLayout = ColorCollectionFlowLayout()
+    private let dataSource = ImageCollectionDataSource()
+    private let flowLayout = ImageCollectionFlowLayout()
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        colorCollection.dataSource = colorDataSource
-        colorCollection.delegate = colorFlowLayout
+        collectionView.dataSource = dataSource
+        collectionView.delegate = flowLayout
+        
+        PHPhotoLibrary.shared().register(self)
+        collectionView.register(ImageCell.nib(), forCellWithReuseIdentifier: ImageCell.identifier)
     }
 }
 
+extension ViewController: PHPhotoLibraryChangeObserver {
+    func photoLibraryDidChange(_ changeInstance: PHChange) { }
+}
