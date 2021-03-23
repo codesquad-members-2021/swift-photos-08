@@ -27,13 +27,27 @@
                                     <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                                 </collectionViewFlowLayout>
                                 <cells>
-                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="Cell" id="4fA-xT-7Op">
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="Cell" id="4fA-xT-7Op" customClass="ImageCollectionViewCell" customModule="PhotosApp" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="0.0" width="128" height="128"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="avI-Dy-FW2">
                                             <rect key="frame" x="0.0" y="0.0" width="128" height="128"/>
                                             <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Qci-Oh-KUV">
+                                                    <rect key="frame" x="0.0" y="0.0" width="128" height="128"/>
+                                                </imageView>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="Qci-Oh-KUV" firstAttribute="leading" secondItem="avI-Dy-FW2" secondAttribute="leading" id="I3q-ZX-hKd"/>
+                                                <constraint firstItem="Qci-Oh-KUV" firstAttribute="top" secondItem="avI-Dy-FW2" secondAttribute="top" id="VNJ-1R-ChR"/>
+                                                <constraint firstAttribute="trailing" secondItem="Qci-Oh-KUV" secondAttribute="trailing" id="WuT-No-nCJ"/>
+                                                <constraint firstAttribute="bottom" secondItem="Qci-Oh-KUV" secondAttribute="bottom" id="bac-bN-Dt4"/>
+                                            </constraints>
                                         </collectionViewCellContentView>
+                                        <connections>
+                                            <outlet property="imageView" destination="Qci-Oh-KUV" id="wnl-Lo-WQJ"/>
+                                        </connections>
                                     </collectionViewCell>
                                 </cells>
                             </collectionView>

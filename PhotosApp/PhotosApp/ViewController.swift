@@ -11,6 +11,7 @@ class ViewController: UIViewController {
 
     @IBOutlet weak var colorCollection: UICollectionView!
     
+    
     private let colorDataSource = ColorCollectionDataSource()
     private let colorFlowLayout = ColorCollectionFlowLayout()
     
@@ -19,6 +20,9 @@ class ViewController: UIViewController {
         
         colorCollection.dataSource = colorDataSource
         colorCollection.delegate = colorFlowLayout
+        colorDataSource.requestImage()
     }
+    
+    
 }
 
