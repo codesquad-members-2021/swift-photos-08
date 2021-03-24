@@ -32,7 +32,16 @@ class DoodlesViewController: UICollectionViewController {
     
     override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: DoodleCell.identifier, for: indexPath) as! DoodleCell
-        cell.backgroundColor = .blue
+        
+        DispatchQueue.global().async {
+            guard let url = URL(string: self.manager.getImage(index: indexPath.row)), let data = try? Data(contentsOf: url) else {
+                return
+            }
+            DispatchQueue.main.async {
+                cell.doodleImage.image = UIImage(data: data)
+            }
+        }
+        
         return cell
     }
 }

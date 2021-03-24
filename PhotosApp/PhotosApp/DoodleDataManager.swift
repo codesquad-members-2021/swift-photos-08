@@ -28,4 +28,8 @@ class DoodleDataManager {
     func count() -> Int {
         return doodles.count
     }
+    
+    func getImage(index: Int) -> String {
+        return doodles[index].image
+    }
 }
