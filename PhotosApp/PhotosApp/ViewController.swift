@@ -23,7 +23,9 @@ class ViewController: UIViewController {
         
         PHPhotoLibrary.shared().register(self)
         collectionView.register(ImageCell.nib(), forCellWithReuseIdentifier: ImageCell.identifier)
+        DoodleDataManager().load()
     }
+    
     @IBAction func moveDoodlesView(_ sender: UIBarButtonItem) {
         let layout = UICollectionViewFlowLayout()
         layout.scrollDirection = .vertical
