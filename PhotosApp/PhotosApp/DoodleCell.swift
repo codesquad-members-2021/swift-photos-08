@@ -17,4 +17,14 @@ class DoodleCell: UICollectionViewCell {
     static var nib : UINib {
         return UINib(nibName: identifier, bundle: nil)
     }
+    
+    override func awakeFromNib() {
+        super.awakeFromNib()
+        let gesture = UILongPressGestureRecognizer(target: self, action: #selector(touch))
+        self.addGestureRecognizer(gesture)
+    }
+    
+    @objc func touch() {
+        
+    }
 }
