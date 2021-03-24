@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="17506" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17505"/>
+        <capability name="collection view cell content view" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="ikB-ie-Hze" customClass="DoodleCell" customModule="PhotosApp" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="300" height="374"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="EMI-L8-CI2">
+                <rect key="frame" x="0.0" y="0.0" width="300" height="374"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="F3h-kH-ErM">
+                        <rect key="frame" x="0.0" y="0.0" width="300" height="374"/>
+                    </imageView>
+                </subviews>
+                <constraints>
+                    <constraint firstAttribute="bottom" secondItem="F3h-kH-ErM" secondAttribute="bottom" id="0ZL-Ux-Nz0"/>
+                    <constraint firstItem="F3h-kH-ErM" firstAttribute="leading" secondItem="EMI-L8-CI2" secondAttribute="leading" id="2ht-pU-HJC"/>
+                    <constraint firstItem="F3h-kH-ErM" firstAttribute="top" secondItem="EMI-L8-CI2" secondAttribute="top" id="ots-ix-BNF"/>
+                    <constraint firstAttribute="trailing" secondItem="F3h-kH-ErM" secondAttribute="trailing" id="v5r-gg-Bew"/>
+                </constraints>
+            </collectionViewCellContentView>
+            <size key="customSize" width="300" height="374"/>
+            <connections>
+                <outlet property="doodleImage" destination="F3h-kH-ErM" id="DMh-0V-lM8"/>
+            </connections>
+            <point key="canvasLocation" x="-10.144927536231885" y="121.20535714285714"/>
+        </collectionViewCell>
+    </objects>
+</document>

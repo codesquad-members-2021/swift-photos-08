@@ -11,6 +11,9 @@
 		BF22088226087AF60072E5FC /* ImageCollectionFlowLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF22088126087AF60072E5FC /* ImageCollectionFlowLayout.swift */; };
 		BF22088626087C700072E5FC /* Color.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF22088526087C700072E5FC /* Color.swift */; };
 		BFCAE2E32609900D000A4293 /* ImageCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFCAE2E22609900D000A4293 /* ImageCell.swift */; };
+		BFCAE2EE260B0FA0000A4293 /* DoodlesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFCAE2ED260B0FA0000A4293 /* DoodlesViewController.swift */; };
+		BFCAE2F1260B1315000A4293 /* DoodleCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = BFCAE2F0260B1315000A4293 /* DoodleCell.xib */; };
+		BFCAE2F4260B134B000A4293 /* DoodleCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFCAE2F3260B134B000A4293 /* DoodleCell.swift */; };
 		D018C4452609B1EC00991D43 /* ImageFetch.swift in Sources */ = {isa = PBXBuildFile; fileRef = D018C4442609B1EC00991D43 /* ImageFetch.swift */; };
 		D018C4492609B6DC00991D43 /* ImageCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D018C4482609B6DC00991D43 /* ImageCell.xib */; };
 		D074693626086C3700A512A6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D074693526086C3700A512A6 /* AppDelegate.swift */; };
@@ -26,6 +29,9 @@
 		BF22088126087AF60072E5FC /* ImageCollectionFlowLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageCollectionFlowLayout.swift; sourceTree = "<group>"; };
 		BF22088526087C700072E5FC /* Color.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Color.swift; sourceTree = "<group>"; };
 		BFCAE2E22609900D000A4293 /* ImageCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageCell.swift; sourceTree = "<group>"; };
+		BFCAE2ED260B0FA0000A4293 /* DoodlesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DoodlesViewController.swift; sourceTree = "<group>"; };
+		BFCAE2F0260B1315000A4293 /* DoodleCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DoodleCell.xib; sourceTree = "<group>"; };
+		BFCAE2F3260B134B000A4293 /* DoodleCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DoodleCell.swift; sourceTree = "<group>"; };
 		D018C4442609B1EC00991D43 /* ImageFetch.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageFetch.swift; sourceTree = "<group>"; };
 		D018C4482609B6DC00991D43 /* ImageCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ImageCell.xib; sourceTree = "<group>"; };
 		D074693226086C3700A512A6 /* PhotosApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PhotosApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -61,6 +67,7 @@
 			isa = PBXGroup;
 			children = (
 				D018C4482609B6DC00991D43 /* ImageCell.xib */,
+				BFCAE2F0260B1315000A4293 /* DoodleCell.xib */,
 			);
 			name = View;
 			sourceTree = "<group>";
@@ -97,6 +104,8 @@
 				D074693526086C3700A512A6 /* AppDelegate.swift */,
 				D074693726086C3700A512A6 /* SceneDelegate.swift */,
 				D074693926086C3700A512A6 /* ViewController.swift */,
+				BFCAE2ED260B0FA0000A4293 /* DoodlesViewController.swift */,
+				BFCAE2F3260B134B000A4293 /* DoodleCell.swift */,
 				D018C4442609B1EC00991D43 /* ImageFetch.swift */,
 				BF22088826087C740072E5FC /* Extension */,
 				D018C44F2609BADF00991D43 /* ImageCollection */,
@@ -169,6 +178,7 @@
 				D074694226086C3700A512A6 /* LaunchScreen.storyboard in Resources */,
 				D018C4492609B6DC00991D43 /* ImageCell.xib in Resources */,
 				D074693F26086C3700A512A6 /* Assets.xcassets in Resources */,
+				BFCAE2F1260B1315000A4293 /* DoodleCell.xib in Resources */,
 				D074693D26086C3700A512A6 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -181,12 +191,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				D018C4452609B1EC00991D43 /* ImageFetch.swift in Sources */,
+				BFCAE2EE260B0FA0000A4293 /* DoodlesViewController.swift in Sources */,
 				D074693A26086C3700A512A6 /* ViewController.swift in Sources */,
 				D074693626086C3700A512A6 /* AppDelegate.swift in Sources */,
 				BF22087B260879790072E5FC /* ImageCollectionDataSourece.swift in Sources */,
 				BFCAE2E32609900D000A4293 /* ImageCell.swift in Sources */,
 				BF22088226087AF60072E5FC /* ImageCollectionFlowLayout.swift in Sources */,
 				D074693826086C3700A512A6 /* SceneDelegate.swift in Sources */,
+				BFCAE2F4260B134B000A4293 /* DoodleCell.swift in Sources */,
 				BF22088626087C700072E5FC /* Color.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
