@@ -20,3 +20,16 @@ iOS 연습 - 8팀(Neo, 쑤)
 
 <img width="412" alt="스크린샷 2021-03-23 오후 3 04 25" src="https://user-images.githubusercontent.com/75113784/112100861-1c196800-8be9-11eb-8da5-1c49a517de80.png">
 완료일자 : 3월 23일
+
+## GCD
+### 주요 작업
+- json data를 Doodle model에 decoding (Codable 채택)
+- GCD를 활용해서 이미지 Data를 이미지뷰에 표시
+ - DoodleViewController를 root로 하는 UINavigationController를 present, Close UIBarButtonItem 추가
+ - DoodleCell에 UILongPressGestureRecognizer 추가
+ - UIMenuController 생성해서 gesture 시 item을 띄우도록 구현
+ - UIImageWriteToSavedPhotosAlbum 함수로 save item 선택 시, 라이브러리에 저장하도록 구현
+ - 라이브러리에 사진이 업데이트될 때마다, ViewController collectionView를 갱신시키도록 observer 구현
+
+
+<img width="412" alt="스크린샷 2021-03-25 오후 4 47 47" src="https://user-images.githubusercontent.com/75113784/112437087-e8297880-8d89-11eb-8326-a6fefd330d6a.png"><img width="412" alt="스크린샷 2021-03-25 오후 4 49 04" src="https://user-images.githubusercontent.com/75113784/112437202-07280a80-8d8a-11eb-955a-071886147d36.png">
