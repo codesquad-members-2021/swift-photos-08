@@ -9,7 +9,7 @@ import Foundation
 import Photos
 
 class ImageFetch {
-    private var imageFetch : PHFetchResult<PHAsset>
+    private(set) var imageFetch : PHFetchResult<PHAsset>
     
     init() {
         imageFetch = PHFetchResult()
@@ -26,6 +26,10 @@ class ImageFetch {
     
     func object(at index: Int) -> PHAsset {
         return imageFetch.object(at: index)
+    }
+    
+    func fetch(result: PHFetchResult<PHAsset>) {
+        imageFetch = result
     }
 }
 

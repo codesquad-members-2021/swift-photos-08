@@ -23,9 +23,30 @@ class ViewController: UIViewController {
         
         PHPhotoLibrary.shared().register(self)
         collectionView.register(ImageCell.nib(), forCellWithReuseIdentifier: ImageCell.identifier)
+        DoodleDataManager().load()
+    }
+    
+    @IBAction func moveDoodlesView(_ sender: UIBarButtonItem) {
+        let layout = UICollectionViewFlowLayout()
+        layout.scrollDirection = .vertical
+        layout.itemSize = CGSize(width: 110, height: 50)
+        
+        let nav = UINavigationController(rootViewController: DoodlesViewController(collectionViewLayout: layout))
+        nav.modalPresentationStyle = .fullScreen
+        present(nav, animated: true, completion: nil)
     }
 }
 
 extension ViewController: PHPhotoLibraryChangeObserver {
-    func photoLibraryDidChange(_ changeInstance: PHChange) { }
+    func photoLibraryDidChange(_ changeInstance: PHChange) {
+        if let change = changeInstance.changeDetails(for: dataSource.imageFetch.imageFetch) {
+            let result = change.fetchResultAfterChanges
+            dataSource.imageFetch.fetch(result: result)
+        }
+        
+        DispatchQueue.main.async {
+            self.collectionView.reloadData()
+        }
+    }
 }
+
