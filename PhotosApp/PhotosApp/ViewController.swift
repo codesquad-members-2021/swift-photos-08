@@ -38,6 +38,15 @@ class ViewController: UIViewController {
 }
 
 extension ViewController: PHPhotoLibraryChangeObserver {
-    func photoLibraryDidChange(_ changeInstance: PHChange) { }
+    func photoLibraryDidChange(_ changeInstance: PHChange) {
+        if let change = changeInstance.changeDetails(for: dataSource.imageFetch.imageFetch) {
+            let result = change.fetchResultAfterChanges
+            dataSource.imageFetch.fetch(result: result)
+        }
+        
+        DispatchQueue.main.async {
+            self.collectionView.reloadData()
+        }
+    }
 }
 
