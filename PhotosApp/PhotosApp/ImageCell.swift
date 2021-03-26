@@ -6,9 +6,12 @@
 //
 
 import UIKit
+import Photos
+import PhotosUI
 
 class ImageCell: UICollectionViewCell {
     @IBOutlet weak var imageView : UIImageView!
+    @IBOutlet weak var livePhotoStateView: UIImageView!
     
     static let identifier = "ImageCell"
     
@@ -18,6 +21,10 @@ class ImageCell: UICollectionViewCell {
     
     static func nib() -> UINib {
         return UINib(nibName: identifier, bundle: nil)
+    }
+    
+    func check(_ asset : PHAsset) -> UIImage {
+        return asset.mediaSubtypes == .photoLive ? PHLivePhotoView.livePhotoBadgeImage(options: .overContent) : UIImage()
     }
     
     func setImage(_ image: UIImage?) {
