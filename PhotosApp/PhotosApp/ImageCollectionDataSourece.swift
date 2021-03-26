@@ -8,6 +8,7 @@
 import Foundation
 import UIKit
 import Photos
+import PhotosUI
 
 class ImageCollectionDataSource : NSObject, UICollectionViewDataSource {
     
@@ -29,6 +30,7 @@ class ImageCollectionDataSource : NSObject, UICollectionViewDataSource {
         }
         let asset = imageFetch.object(at: indexPath.row)
         imageManager.requestImage(for: asset, targetSize: CGSize(width: 100, height: 100), contentMode: .aspectFit, options: nil) { (image, _) in
+            cell.livePhotoStateView.image = cell.check(asset)
             cell.setImage(image)
         }
         return cell
